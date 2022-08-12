@@ -78,8 +78,8 @@ public class RarePlayerMoveEventCaller implements Timer {
             result = 31 * result + (int) (temp ^ (temp >>> 32));
             temp = Double.doubleToLongBits(z);
             result = 31 * result + (int) (temp ^ (temp >>> 32));
-            result = 31 * result + (yaw != +0.0f ? Float.floatToIntBits(yaw) : 0);
-            result = 31 * result + (pitch != +0.0f ? Float.floatToIntBits(pitch) : 0);
+            result = 31 * result + (yaw != 0.0f ? Float.floatToIntBits(yaw) : 0);
+            result = 31 * result + (pitch != 0.0f ? Float.floatToIntBits(pitch) : 0);
             return result;
         }
     }

@@ -97,7 +97,7 @@ public class AfkPlayerHandler implements Listener {
 
     @EventHandler
     public void onPlayerMove(RarePlayerMoveEvent event) {
-        //Bukkit.broadcastMessage("WeakPlayerMoveEvent called for player " + event.getPlayer());
+        //Bukkit.broadcastMessage("RarePlayerMoveEvent called for player " + event.getPlayer().getName());
         Player player = event.getPlayer();
         if (isAfk(player)) {
             setAfk(player, false);
