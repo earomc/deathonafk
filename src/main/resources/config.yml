@@ -1,0 +1,5 @@
+# Duration in seconds before a player is considered afk.
+seconds-before-afk: 120
+
+# The delay in ticks between player movement checks.
+movement-check-interval-ticks: 20

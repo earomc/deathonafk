@@ -1,0 +1,6 @@
+name: DeathOnAFK
+version: '${project.version}'
+main: net.earomc.deathonafk.DeathOnAFK
+api-version: 1.19
+authors: [ earomc ]
+description: Kills the player when they are away from their keyboard for too long.
