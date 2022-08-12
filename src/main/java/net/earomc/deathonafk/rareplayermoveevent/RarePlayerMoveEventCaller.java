@@ -36,7 +36,7 @@ public class RarePlayerMoveEventCaller implements Timer {
                     //player has moved since last check.
                     playerToLastLocationMap.put(player, to);
                     World world = player.getWorld();
-                    Bukkit.getPluginManager().callEvent(new RarePlayerMoveEvent(player, from.toBukkit(world), to.toBukkit(world)));
+                    Bukkit.getPluginManager().callEvent(new RarePlayerMoveEvent(player, from == null ? to.toBukkit(world) : from.toBukkit(world), to.toBukkit(world)));
                 }
             }
         });

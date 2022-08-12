@@ -37,7 +37,7 @@ public class AfkPlayerHandler implements Listener {
                     setAfk(player, true);
                 }
             }
-            //Bukkit.broadcast(Text.gray(player.getName() + " -> lastMoved -> " + getSecondsLastMoved(player) + " seconds."));
+            //Bukkit.broadcastMessage(player.getName() + " -> lastMoved -> " + getSecondsLastMoved(player) + " seconds.");
         }));
     }
 
@@ -97,8 +97,7 @@ public class AfkPlayerHandler implements Listener {
 
     @EventHandler
     public void onPlayerMove(RarePlayerMoveEvent event) {
-        //TODO: REMOVE this debug message.
-        Bukkit.broadcastMessage("WeakPlayerMoveEvent called for player " + event.getPlayer());
+        //Bukkit.broadcastMessage("WeakPlayerMoveEvent called for player " + event.getPlayer());
         Player player = event.getPlayer();
         if (isAfk(player)) {
             setAfk(player, false);
